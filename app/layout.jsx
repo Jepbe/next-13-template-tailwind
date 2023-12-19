@@ -1,14 +1,17 @@
 import './ui/globals.css';
-import { Inter } from 'next/font/google'
+import { Kanit } from 'next/font/google'
 
 
-const inter = Inter({ subsets: ['latin'] })
+const kanit = Kanit({
+  weight: ['100', '200', '300', '400', '500', '600'],
+  subsets: ['latin'],
+})
 
 export default function DashboardLayout({ children }) {
 
   return ( 
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={kanit.className}>{children}</body>
     </html> 
     );
 }
